@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="rounded border mt-5 mb-3">
+        <h4 class="text-primary text-center my-5">Danh sách người dùng trực tuyến</h4>
+        <p style="padding: 0 24px">Số người online: <strong class="badge badge-danger badge-pill">5</strong></p>
+        <div class="people inbox__people">
+        </div>
+      </div>
+      <p class="small">Danh sách này cần được cập nhật tự động mỗi khi có người dùng đăng nhập hoặc đăng xuất/thoát.
+        Ngoài ra trạng thái của mỗi người dùng cũng cần được cập nhật mỗi khi họ tham gia hoặc rời một cuộc trò
+        chuyện.</p>
+      <p class="small">Để cho đơn giản, trang web chỉ cần hỗ trợ với mỗi người vào một thời điểm, không thể chat với người có trạng thái là <strong>đang bận</strong>.</p>
+    </div>
+    <div class="col-md-8">
+      <div class="rounded border mt-3 mb-3">
+        <div class="user">
+          <div class="avatar">C</div>
+          <div class="user-info">
+            <div class="user-name">Phạm Công Chánh</div>
+            <div class="online">Vừa mới truy cập</div>
+          </div>
+          <div class="actions">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-video"></i>
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="conversation messages__history">
+            <div class="message my-message">Ra quân chiến dịch Xuân tình nguyện năm 2021
+              <span class="time">08:59</span>
+            </div>
+            <div class="message their-message">OK! Rất rốt
+              <span class="time">08:59</span>
+            </div>
+            
+        </div>
+        <div class="message-input">
+          <div class="typing fallback" style="display: none;"></div>
+          <input type="text" placeholder="Nhập tin nhắn" class="message_form__input"  />
+          <a href="#" class="message_form">Gửi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+<div id="notify">
+
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
+<script src="main.js"></script>
+{{#with user}}
+<script>
+  // new user is created so we generate nickname and emit event
+  newUserConnected({name:'{{{name}}}',id:'{{id}}'});
+</script>
+{{/with}}

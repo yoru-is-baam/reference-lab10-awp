@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sách người dùng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css    ">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      cursor: pointer;
+    }
+
+    .user:nth-child(odd) {
+      background-color: #F4F5F7;
+    }
+
+    .user:hover {
+      background-color: #E6EFFF;
+      transition: 0.3s;
+    }
+
+    .avatar {
+      font-weight: bold;
+      font-size: 1.5rem;
+      background-color: deepskyblue;
+      width: 50px;
+      height: 50px;
+      margin-right: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white
+    }
+
+    .user-info {
+      height: 50px;
+      flex-grow: 1;
+    }
+
+    .user-name {
+      font-size: 1.1rem;
+    }
+
+    .user-info .online {
+      font-size: 0.9rem;
+      color: rgb(99, 99, 99)
+    }
+
+    .user .status {
+      width: 90px;
+      text-align: center;
+    }
+
+    .user:hover {
+      background-color: #E6EFFF;
+    }
+
+    .user:hover .avatar {
+      background-color: rgb(7, 142, 204);
+      transition: 0.3s;
+    }
+
+    .user:hover .user-name {
+      font-weight: 450;
+      transition: 0.3s;
+    }
+    .conversation {
+      background-color: rgb(158, 158, 158);
+      padding: 24px;
+      height: 75vh;
+      overflow: auto;
+    }
+    
+    .message {
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      width: max-content;
+      max-width: 60%;
+      font-size: 0.9rem;
+    }
+
+    .img-message {
+      border-radius: 8px;
+      margin-bottom: 12px;
+      width: max-content;
+      max-width: 50%;
+    }
+    .img-message img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .img-message img:hover {
+       opacity: 0.85;
+    }
+
+    .my-message {
+      border-radius: 12px;
+      background-color: #DBEAFE;
+    }
+    .my-message:hover {
+      background-color: #b4cbe9;
+      transition: 0.3s;
+    }
+
+    .their-message {
+      border-radius: 12px;
+      background-color: white;
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .their-message:hover {
+      background-color: rgb(231, 231, 231);
+      transition: 0.3s;
+    }
+    .message .time {
+      margin-top: 2px;
+      display: block;
+      font-size: 0.8rem;
+      color: rgb(102, 102, 102);
+    }
+
+    .message-input {
+      border-top: 1px solid rgb(190, 190, 190);
+      display: flex;
+      position: relative;
+    }
+    .typing {
+        background-color: rgb(242, 251, 255);
+        border-radius: 4px;
+        padding: 4px 8px;
+        width: fit-content;
+        font-size: 0.7em;
+        position: absolute;
+        top: -25px;
+        left: 2px;
+    }
+
+    .message-input input[type="text"] {
+        flex-grow: 1;
+        border: none;
+        padding: 8px 16px;
+    }
+
+    .message-input input[type="text"]:focus {
+      border: none;
+      outline: none;
+      transition: 0.3s;
+    } 
+
+    .message-input a{
+      text-decoration: none;
+      padding: 8px;
+      margin: 8px;
+    }
+    .message-input a:hover{
+      background-color: rgb(215, 229, 255);
+      border-radius: 4px;
+    }
+
+    .user .actions {
+       color:rgb(161, 161, 161);
+       font-size: 1.2rem;
+    }
+    .user .actions i {
+       display: inline-block;
+        border-radius: 8px;
+       padding: 12px;
+    }
+    .user .actions i:hover {
+       display: inline-block;
+       color:rgb(128, 128, 128);
+       background-color: rgb(215, 229, 255);
+       transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+    {{{body}}}
+</body>
+</html>
